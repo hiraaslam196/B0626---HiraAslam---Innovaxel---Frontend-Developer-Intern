@@ -1,0 +1,82 @@
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 480px) { .row { grid-template-columns: 1fr; } }
+
+.group { display: flex; flex-direction: column; gap: 6px; }
+
+.group label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.group input,
+.group select,
+.group textarea {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 11px 14px;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  appearance: none;
+  width: 100%;
+}
+
+.group input:focus,
+.group select:focus,
+.group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(240,192,64,0.12);
+}
+
+.inputErr { border-color: var(--accent2) !important; }
+.hasError .err { display: block; }
+
+.err {
+  font-size: 11px;
+  color: var(--accent2);
+  display: none;
+}
+
+.group textarea { resize: vertical; min-height: 76px; }
+select option { background: var(--surface2); }
+
+.btnPrimary {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  background: var(--accent);
+  color: #111;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 20px;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+.btnPrimary:hover {
+  background: #f8d060;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(240,192,64,0.3);
+}
+
+.btnSecondary {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface2);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 11px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  width: 100%;
+}
+.btnSecondary:hover { border-color: var(--muted); color: var(--text); }

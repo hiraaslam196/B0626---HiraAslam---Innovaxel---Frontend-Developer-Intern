@@ -1,0 +1,54 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #0f0f13;
+  --surface:  #18181f;
+  --surface2: #22222c;
+  --border:   #2e2e3a;
+  --accent:   #f0c040;
+  --accent2:  #e05c5c;
+  --text:     #f0eee8;
+  --muted:    #7a7a8c;
+  --green:    #4ecb8d;
+  --blue:     #5ea8f5;
+  --purple:   #a78bfa;
+  --orange:   #fb923c;
+  --pink:     #f472b6;
+  --cyan:     #22d3ee;
+  --gray:     #9ca3af;
+  --radius:   14px;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 10% 0%, rgba(240,192,64,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(94,168,245,0.05) 0%, transparent 60%);
+}
+
+input, select, textarea, button { font-family: var(--font-body); }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
